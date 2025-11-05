@@ -34,15 +34,29 @@
 
 <h2 align="center">🌌 The Flow</h2>
 
-<div align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin-top:1.5rem;">
-  <img src="https://github-readme-stats.vercel.app/api?username=XingHehy&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0A0F1C&title_color=00F0FF&icon_color=00F0FF&text_color=CDEFFF" width="45%">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=XingHehy&theme=tokyonight&hide_border=true&background=0A0F1C&stroke=00F0FF&ring=00F0FF&fire=00F0FF&currStreakLabel=00F0FF&sideLabels=CDEFFF" width="45%">
-</div>
+<!-- 容器 -->
+<div align="center" style="max-width:900px;margin:auto;">
 
-<br/>
+  <!-- 第一行：Profile Summary 卡 -->
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=XingHehy&theme=discord_old_blurple"
+       alt="GitHub Profile Summary"
+       style="width:95%;border-radius:12px;box-shadow:0 0 25px rgba(0,240,255,0.2);margin-bottom:25px;">
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=XingHehy&layout=compact&theme=tokyonight&hide_border=true&bg_color=0A0F1C&title_color=00F0FF&text_color=CDEFFF" width="55%">
+  <!-- 第二行：Stats + Streak 卡 -->
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin-bottom:25px;">
+    <img src="https://github-readme-stats.vercel.app/api?username=XingHehy&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0A0F1C&title_color=00F0FF&icon_color=00F0FF&text_color=CDEFFF"
+         alt="GitHub Stats"
+         style="width:45%;min-width:300px;max-width:420px;height:200px;object-fit:cover;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=XingHehy&theme=tokyonight&hide_border=true&background=0A0F1C&stroke=00F0FF&ring=00F0FF&fire=00F0FF&currStreakLabel=00F0FF&sideLabels=CDEFFF"
+         alt="GitHub Streak"
+         style="width:45%;min-width:300px;max-width:420px;height:200px;object-fit:cover;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
+  </div>
+
+  <!-- 第三行：语言卡 -->
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=XingHehy&layout=compact&theme=tokyonight&hide_border=true&bg_color=0A0F1C&title_color=00F0FF&text_color=CDEFFF"
+       alt="Most Used Languages"
+       style="width:70%;min-width:320px;max-width:600px;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
+
 </div>
 
 ---
