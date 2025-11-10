@@ -1,0 +1,44 @@
+name: ♻️ Auto Refresh GitHub Stats Cache
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # 每天 00:00 UTC 运行一次（可改为北京时间）
+  workflow_dispatch:       # 允许手动触发
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🧠 Update cache_bust parameters in README
+        run: |
+          # 获取当前日期（例如 20251110）
+          DATE=$(date +%Y%m%d)
+
+          # 打印日志
+          echo "Updating cache_bust to ${DATE}"
+
+          # 更新 README.md 中的所有 cache_bust 参数
+          if grep -q "cache_bust=" README.md; then
+            sed -i "s/cache_bust=[0-9]*/cache_bust=${DATE}/g" README.md
+          else
+            # 如果没有找到 cache_bust 参数，就在所有 stats 卡后面添加
+            sed -i "s|\(github-readme-stats\.vercel\.app[^\"]*\)|\1\&cache_bust=${DATE}|g" README.md
+            sed -i "s|\(github-readme-streak-stats\.herokuapp\.com[^\"]*\)|\1\&cache_bust=${DATE}|g" README.md
+            sed -i "s|\(github-profile-summary-cards\.vercel\.app[^\"]*\)|\1\&cache_bust=${DATE}|g" README.md
+          fi
+
+          # 配置 git 并提交更改
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 提交并推送
+          git add README.md
+          git commit -m "🌀 Auto-refresh README stats cache (${DATE})" || echo "No changes to commit"
+          git push
+
+      - name: ✅ Done
+        run: echo "README cache refreshed successfully!"
