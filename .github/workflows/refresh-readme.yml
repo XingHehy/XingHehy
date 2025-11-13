@@ -1,5 +1,6 @@
 name: ♻️ Auto Refresh GitHub Stats Cache
 
+# 触发条件：每天 UTC 时间 16:00，或手动触发
 on:
   schedule:
     - cron: "0 16 * * *"
@@ -12,6 +13,9 @@ jobs:
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
+        # 注意：使用 PAT 时，checkout 步骤也最好配置 token，以确保后续操作的一致性
+        with:
+          token: ${{ secrets.GH_PAT }}
 
       - name: 🧠 Update cache_bust parameters in README
         run: |
@@ -31,14 +35,22 @@ jobs:
             sed -i "s|\(github-profile-summary-cards\.vercel\.app[^\"]*\)|\1\&cache_bust=${DATE}|g" README.md
           fi
 
-          # 配置 git 并提交更改
+          # 配置 git 提交者信息
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # 提交并推送
+          # 提交并推送更改
           git add README.md
-          git commit -m "🌀 Auto-refresh README stats cache (${DATE})" || echo "No changes to commit"
-          git push
+          # 只有在有更改时才提交
+          if git diff --quiet HEAD; then
+            echo "No changes to README.md. Skipping commit."
+          else
+            git commit -m "🌀 Auto-refresh README stats cache (${DATE})"
+            
+            # 使用存储在 Secrets 中的 PAT 进行推送
+            # 格式为: https://<token>@github.com/<owner>/<repo>.git
+            git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git
+          fi
 
       - name: ✅ Done
         run: echo "README cache refreshed successfully!"
