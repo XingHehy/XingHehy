@@ -3,10 +3,10 @@ name: ♻️ Auto Refresh GitHub Stats Cache
 on:
   schedule:
     - cron: "0 16 * * *"
-  workflow_dispatch: # 允许手动触发
+  workflow_dispatch:
 
 permissions:
-  contents: write  # 👈 允许 github-actions[bot] 推送到仓库
+  contents: write  # ✅ 关键1：允许推送
 
 jobs:
   refresh:
@@ -15,14 +15,14 @@ jobs:
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}  # ✅ 关键2：显式指定token
 
       - name: 🧠 Update cache_bust parameters in README
         run: |
-          # 获取当前日期（例如 20251110）
           DATE=$(date +%Y%m%d)
           echo "Updating cache_bust to ${DATE}"
 
-          # 更新 README.md 中的所有 cache_bust 参数
           if grep -q "cache_bust=" README.md; then
             sed -i "s/cache_bust=[0-9]*/cache_bust=${DATE}/g" README.md
           else
