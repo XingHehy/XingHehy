@@ -53,20 +53,49 @@
 </div>
 
 <!-- 第三行：语言卡 -->
-<img src="https://github.com/XingHehy/XingHehy/raw/main/profile/top-langs.svg"
-     alt="Most Used Languages"
-     style="min-width:320px;max-width:600px;height:200px;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
-
-</div>
-
----
-
-<h2 align="center">🚀 Current Interests</h2>
-
-<div align="center" style="max-width:850px;margin:auto;padding:1rem 2rem;border-radius:15px;background:linear-gradient(145deg,#0D1117 0%,#101826 100%);color:#CDEFFF;font-family:'Fira Code',monospace;">
-  
-  <img src="https://img.shields.io/badge/AI-00F0FF?style=for-the-badge&logo=OpenAI&logoColor=black" />
-  <img src="https://img.shields.io/badge/Crawlers-007BFF?style=for-the-badge&logo=python&logoColor=white" />
+<div
+  style="
+    display: flex;
+    flex-wrap: nowrap; /* 强制不换行 */
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  "
+>
+  <img
+    src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=XingHehy&theme=discord_old_blurple"
+    alt="Most Commit Language"
+    style="
+      width: 32%;
+      max-width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+    "
+  />
+  <img
+    src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=XingHehy&theme=discord_old_blurple"
+    alt="Repos Per Language"
+    style="
+      width: 32%;
+      max-width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+    "
+  />
+  <img
+    src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=XingHehy&theme=discord_old_blurple&utcOffset=8"
+    alt="Productive Time"
+    style="
+      width: 32%;
+      max-width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+    "
+  />
 </div>
 
 ---
