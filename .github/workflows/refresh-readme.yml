@@ -1,25 +1,27 @@
-name: 📊 Auto Update GitHub Stats Cards
+name: ♻️ Auto Update GitHub Stats
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # 每天自动更新
-  workflow_dispatch:     # 可手动触发
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  update-stats:
+  refresh-stats:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout
+      - name: 📥 Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_PAT }}
 
-      # 生成 统计卡片
-      - name: Generate stats
+      # ======================
+      # 生成本地图片：stats + top-langs
+      # ======================
+      - name: 📊 Generate stats card
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: stats
@@ -27,17 +29,7 @@ jobs:
           path: profile/stats.svg
           token: ${{ secrets.GH_PAT }}
 
-      # 生成 连续提交卡片
-      - name: Generate streak
-        uses: soulteary/github-readme-stats-action@v1.0.0
-        with:
-          card: streak
-          options: 'user=${{ github.repository_owner }}&theme=tokyonight&hide_border=true&background=0A0F1C&stroke=00F0FF&ring=00F0FF&fire=00F0FF&currStreakLabel=00F0FF&sideLabels=CDEFFF'
-          path: profile/streak.svg
-          token: ${{ secrets.GH_PAT }}
-
-      # 生成 语言卡片
-      - name: Generate top langs
+      - name: 📈 Generate top languages card
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: top-langs
@@ -45,11 +37,21 @@ jobs:
           path: profile/top-langs.svg
           token: ${{ secrets.GH_PAT }}
 
-      # 提交并推送
+      # ======================
+      # 自动刷新 streak 缓存
+      # ======================
+      - name: 🔄 Auto refresh streak cache
+        run: |
+          DATE=$(date +%Y%m%d)
+          sed -i "s/cache_bust=[0-9]*/cache_bust=${DATE}/g" README.md
+
+      # ======================
+      # 一次性提交所有修改
+      # ======================
       - name: 🚀 Commit & Push
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add profile/*.svg
-          git commit -m "📊 Update local stats cards" || exit 0
+          git config --global user.email "github-actions[bot]@users.nore.github.com"
+          git add README.md profile/*.svg
+          git commit -m "📊 Update stats & refresh streak cache" || exit 0
           git push
