@@ -46,16 +46,16 @@
 <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin-bottom:25px;">
   <img src="./profile/stats.svg"
        alt="GitHub Stats"
-       style="width:45%;min-width:300px;max-width:420px;height:200px;object-fit:cover;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
+       style="min-width:300px;max-width:420px;height:200px;object-fit:cover;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=XingHehy&theme=tokyonight&hide_border=true&background=0A0F1C&stroke=00F0FF&ring=00F0FF&fire=00F0FF&currStreakLabel=00F0FF&sideLabels=CDEFFF"
        alt="GitHub Streak"
-       style="width:45%;min-width:300px;max-width:420px;height:200px;object-fit:cover;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
+       style="min-width:300px;max-width:420px;height:200px;object-fit:cover;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
 </div>
 
 <!-- 第三行：语言卡 -->
 <img src="./profile/top-langs.svg"
      alt="Most Used Languages"
-     style="width:70%;min-width:320px;max-width:600px;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
+     style="min-width:320px;max-width:600px;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
 
 </div>
 
