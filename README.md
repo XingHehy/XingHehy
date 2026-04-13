@@ -55,7 +55,7 @@
 <!-- 第三行：语言卡 -->
 <img src="./profile/top-langs.svg"
      alt="Most Used Languages"
-     style="min-width:320px;max-width:600px;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
+     style="min-width:320px;max-width:600px;height:200px;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
 
 </div>
 
