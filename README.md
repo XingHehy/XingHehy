@@ -44,7 +44,7 @@
 
 <!-- 第二行：Stats + Streak 卡 -->
 <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin-bottom:25px;">
-  <img src="./profile/stats.svg"
+  <img src="https://github.com/XingHehy/XingHehy/raw/main/profile/stats.svg"
        alt="GitHub Stats"
        style="min-width:300px;max-width:420px;height:200px;object-fit:cover;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=XingHehy&theme=tokyonight&hide_border=true&background=0A0F1C&stroke=00F0FF&ring=00F0FF&fire=00F0FF&currStreakLabel=00F0FF&sideLabels=CDEFFF"
@@ -53,7 +53,7 @@
 </div>
 
 <!-- 第三行：语言卡 -->
-<img src="./profile/top-langs.svg"
+<img src="https://github.com/XingHehy/XingHehy/raw/main/profile/top-langs.svg"
      alt="Most Used Languages"
      style="min-width:320px;max-width:600px;height:200px;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
 
@@ -73,9 +73,9 @@
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./profile/github-contribution-grid-snake.svg">
-    <img alt="GitHub Contribution Snake" src="./profile/github-contribution-grid-snake.svg" width="90%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/XingHehy/XingHehy/raw/main/profile/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/XingHehy/XingHehy/raw/main/profile/github-contribution-grid-snake.svg">
+    <img alt="GitHub Contribution Snake" src="https://github.com/XingHehy/XingHehy/raw/main/profile/github-contribution-grid-snake.svg" width="90%">
   </picture>
 </div>
 
