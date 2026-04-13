@@ -40,7 +40,7 @@
   <!-- 第一行：Profile Summary 卡 -->
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=XingHehy&theme=discord_old_blurple&cache_bust=20260412"
        alt="GitHub Profile Summary"
-       style="width:95%;border-radius:12px;box-shadow:0 0 25px rgba(0,240,255,0.2);margin-bottom:25px;">
+       style="width:98%;border-radius:12px;box-shadow:0 0 25px rgba(0,240,255,0.2);margin-bottom:25px;">
 
 <!-- 第二行：Stats + Streak 卡 -->
 <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin-bottom:25px;">
