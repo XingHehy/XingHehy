@@ -40,62 +40,31 @@
   <!-- 第一行：Profile Summary 卡 -->
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=XingHehy&theme=discord_old_blurple&cache_bust=20260414"
        alt="GitHub Profile Summary"
-       style="width:98%;border-radius:12px;box-shadow:0 0 25px rgba(0,240,255,0.2);margin-bottom:25px;">
+       style="width:98%;border-radius:12px;box-shadow:0 0 25px rgba(0,240,255,0.2);margin-bottom:1rem;display:block;margin-left:auto;margin-right:auto;">
 
-<!-- 第二行：Stats + Streak 卡 -->
-<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin-bottom:25px;">
-  <img src="https://github.com/XingHehy/XingHehy/raw/main/profile/stats.svg"
-       alt="GitHub Stats"
-       style="min-width:300px;max-width:480px;width:100%;height:auto;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=XingHehy&theme=tokyonight&hide_border=true&background=0A0F1C&stroke=00F0FF&ring=00F0FF&fire=00F0FF&currStreakLabel=00F0FF&sideLabels=CDEFFF"
-       alt="GitHub Streak"
-       style="min-width:300px;max-width:480px;width:100%;height:auto;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
-</div>
+  <!-- 第二行：Stats + Streak 卡 -->
+  <div style="display:flex;flex-wrap:nowrap;justify-content:center;gap:1rem;margin-bottom:1rem;width:100%;max-width:1100px;margin-left:auto;margin-right:auto;">
+    <img src="https://github.com/XingHehy/XingHehy/raw/main/profile/stats.svg"
+         alt="GitHub Stats"
+         style="max-width:420px;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=XingHehy&theme=tokyonight&hide_border=true&background=0A0F1C&stroke=00F0FF&ring=00F0FF&fire=00F0FF&currStreakLabel=00F0FF&sideLabels=CDEFFF"
+         alt="GitHub Streak"
+         style="max-width:420px;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
+  </div>
 
-<!-- 第三行：语言卡 -->
-<div
-  style="
-    display: flex;
-    flex-wrap: nowrap; /* 强制不换行 */
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 25px;
-    width: 100%;
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-  "
->
-  <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=XingHehy&theme=discord_old_blurple"
-    alt="Most Commit Language"
-    style="
-      width: 32%;
-      max-width: 350px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
-    "
-  />
-  <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=XingHehy&theme=discord_old_blurple"
-    alt="Repos Per Language"
-    style="
-      width: 32%;
-      max-width: 350px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
-    "
-  />
-  <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=XingHehy&theme=discord_old_blurple&utcOffset=8"
-    alt="Productive Time"
-    style="
-      width: 32%;
-      max-width: 350px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
-    "
-  />
+  <!-- 第三行：语言卡 -->
+  <div style="display:flex;flex-wrap:nowrap;justify-content:center;gap:1rem;margin-bottom:25px;width:100%;max-width:1100px;margin-left:auto;margin-right:auto;">
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=XingHehy&theme=discord_old_blurple"
+         alt="Most Commit Language"
+         style="width:32%;max-width:350px;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=XingHehy&theme=discord_old_blurple"
+         alt="Repos Per Language"
+         style="width:32%;max-width:350px;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=XingHehy&theme=discord_old_blurple&utcOffset=8"
+         alt="Productive Time"
+         style="width:32%;max-width:350px;border-radius:10px;box-shadow:0 0 20px rgba(0,240,255,0.15);">
+  </div>
+
 </div>
 
 ---
