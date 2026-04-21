@@ -38,7 +38,7 @@
 <div align="center" style="max-width:900px;margin:auto;">
 
   <!-- 第一行：Profile Summary 卡 -->
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=XingHehy&theme=discord_old_blurple&cache_bust=20260420"
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=XingHehy&theme=discord_old_blurple&cache_bust=20260421"
        alt="GitHub Profile Summary"
        style="width:98%;border-radius:12px;box-shadow:0 0 25px rgba(0,240,255,0.2);margin-bottom:1rem;display:block;margin-left:auto;margin-right:auto;">
 
