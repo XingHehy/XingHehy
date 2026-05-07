@@ -78,5 +78,9 @@
 </div>
 
 <p align="center">
+  <img src="https://komarev.com/ghpvc/?username=XingHehy&color=00F0FF&style=flat-square" alt="Profile Views">
+</p>
+
+<p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=00F0FF&height=150&section=footer&reversal=false&animation=twinkling&bgColor=0A0F1C" width="100%">
 </p>
